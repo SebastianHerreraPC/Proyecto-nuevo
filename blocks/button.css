@@ -1,0 +1,33 @@
+.button {
+  border: none;
+  border: 1px solid white;
+}
+.profile__edit-button {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/edit-avatar.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: 10px;
+}
+.profile__add-button {
+  margin: 0 0 0 165px;
+  right: 0;
+  border: 2px solid white;
+  width: 150px;
+  height: 50px;
+  background-image: url(../images/add.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__like-button {
+  background-image: url(../images/heart.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-color: transparent;
+  width: 21px;
+  height: 18px;
+}

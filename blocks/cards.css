@@ -1,0 +1,39 @@
+.cards {
+}
+.cards__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 361px;
+  width: 282px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card__image {
+  width: 282px;
+  height: 282px;
+}
+.card__info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  height: 80px;
+  background-color: white;
+  color: black;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: left;
+}
+.card__text {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+}
+.card__like {
+}
