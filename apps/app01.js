@@ -1,7 +1,7 @@
 class PodcastEpisode {
   constructor(title, artist, guest, duration) {
-    this.title = title;
-    this.artist = artist;
+    this._title = title;
+    this._artist = artist;
     this.isLiked = false;
     this.guest = guest;
     this.duration = duration;
@@ -10,7 +10,7 @@ class PodcastEpisode {
     this.isLiked = !isLiked;
   }
   getEpisodeInfo() {
-    return ` ${this.artist}. "${this.title}"- ${
+    return ` ${this._artist}. "${this._title}"- ${
       this.guest
     } (${this.getFormattedDuration()} )`;
   }
