@@ -1,0 +1,52 @@
+.popup {
+  position: absolute;
+  height: 100vh;
+  width: 880px;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+}
+.popup__container {
+  position: relative;
+  display: flex;
+  background-color: white;
+  margin: 30% auto;
+  border-radius: 10px 10px;
+  width: 430px;
+  height: 330px;
+}
+.popup__content {
+  margin: 30px 0;
+  width: 330px;
+  background-color: white;
+}
+.popup__title {
+  background-color: white;
+  color: black;
+
+  font-weight: 900;
+  font-size: 24px;
+  margin: auto 54px 36px;
+}
+.popup__form {
+  background-color: white;
+  display: flex;
+  margin-left: 30px;
+  flex-direction: column;
+}
+.popup__input {
+  background-color: white;
+  border: none;
+  color: black;
+  margin: 0px auto 30px;
+  height: 27px;
+  width: 358px;
+  border-bottom: 1px solid #c4c4c4;
+}
+.popup__edit {
+  display: none;
+}
+.popup__add {
+  display: none;
+}

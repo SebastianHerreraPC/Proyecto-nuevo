@@ -31,3 +31,47 @@
   width: 21px;
   height: 18px;
 }
+.card__trash-button {
+  position: absolute;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/trashWhite.png);
+  border: none;
+  background-position: center;
+  background-size: 30px;
+  background-color: transparent;
+  top: 18px;
+  right: 18px;
+}
+.popup__close-button {
+  position: absolute;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/close-icon.svg);
+  background-position: center;
+  top: -40px;
+  right: -30px;
+  border: none;
+}
+.popup__close-add-button {
+  position: absolute;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/close-icon.svg);
+  background-position: center;
+  top: -40px;
+  right: -30px;
+  border: none;
+}
+
+.button__submit {
+  margin: 18px 0;
+  height: 50px;
+  width: 358px;
+  border: 1px solid #c4c4c4;
+  background-color: black;
+  border-radius: 2px;
+}
