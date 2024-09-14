@@ -32,9 +32,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //add images
+  const formAdd = document.querySelector(".popup__form-edit");
+  const inputPlace = document.querySelector(".popup__input-lugar");
+
   const popupAdd = document.querySelector(".popup__add");
   const addButton = document.querySelector(".profile__add-button");
   const closeAddButton = document.querySelector(".popup__close-add-button");
+
+  formAdd.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+  });
 
   function popupAddOpen() {
     popupAdd.style.display = "block";

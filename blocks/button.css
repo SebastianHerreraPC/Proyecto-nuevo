@@ -55,6 +55,7 @@
   right: -30px;
   border: none;
 }
+
 .popup__close-add-button {
   position: absolute;
   background-color: transparent;
@@ -74,4 +75,17 @@
   border: 1px solid #c4c4c4;
   background-color: black;
   border-radius: 2px;
+}
+
+.popup__close-button:hover {
+  transform: scale(1.1);
+}
+.button__submit:hover {
+  transform: scale(1.05);
+}
+.profile__edit-button:hover {
+  transform: scale(1.1);
+}
+.profile__add-button:hover {
+  transform: scale(1.1);
 }
