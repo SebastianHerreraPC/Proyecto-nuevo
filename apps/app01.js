@@ -34,10 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
   //add images
   const formAdd = document.querySelector(".popup__form-edit");
   const inputPlace = document.querySelector(".popup__input-lugar");
-
   const popupAdd = document.querySelector(".popup__add");
   const addButton = document.querySelector(".profile__add-button");
   const closeAddButton = document.querySelector(".popup__close-add-button");
+  const cardContainer = document.querySelector(".cards__container");
 
   formAdd.addEventListener("submit", function (evt) {
     evt.preventDefault();
@@ -52,8 +52,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   addButton.addEventListener("click", function () {
     popupAddOpen();
+    addPlace();
   });
   closeAddButton.addEventListener("click", function () {
     popupAddClose();
   });
+
+  function addPlace() {
+    cardContainer.innerHTML += `
+    <div class="card">
+      <button class="card__trash-button button"></button>
+      <img src="./images/yoshemite.jpg" alt="" class="card__image" />
+      <div class="card__info">
+       <p class="card__text">Valle de Yosemite</p>
+        <button class="card__like-button button"></button>
+      </div>
+    </div>`;
+  }
+  addPlace();
 });
