@@ -69,5 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </div>`;
   }
+
+  addPlace();
+  addPlace();
+  addPlace();
   addPlace();
 });
