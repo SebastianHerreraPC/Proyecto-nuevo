@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //add images
   const formAdd = document.querySelector(".popup__form-edit");
-  const inputPlace = document.querySelector(".popup__input-lugar");
+  const placeName = document.querySelector(".popup__input-lugar");
   const popupAdd = document.querySelector(".popup__add");
   const addButton = document.querySelector(".profile__add-button");
   const closeAddButton = document.querySelector(".popup__close-add-button");
@@ -59,19 +59,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function addPlace() {
-    cardContainer.innerHTML += `
+    cardContainer.insertAdjacentHTML(
+      "beforeend",
+      `
     <div class="card">
       <button class="card__trash-button button"></button>
       <img src="./images/yoshemite.jpg" alt="" class="card__image" />
       <div class="card__info">
-       <p class="card__text">Valle de Yosemite</p>
+       <p class="card__text">name</p>
         <button class="card__like-button button"></button>
       </div>
-    </div>`;
+    </div>`
+    );
   }
 
-  addPlace();
-  addPlace();
-  addPlace();
-  addPlace();
+  console.log(typeof document.querySelector(".popup__input-lugar").value);
 });
