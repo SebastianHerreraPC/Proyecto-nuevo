@@ -32,16 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //add images
-  const formAdd = document.querySelector(".popup__form-edit");
-  const placeName = document.querySelector(".popup__input-lugar");
+  const formAdd = document.querySelector(".popup__form-add");
   const popupAdd = document.querySelector(".popup__add");
+  let placeName = document.querySelector(".popup__input-lugar");
   const addButton = document.querySelector(".profile__add-button");
   const closeAddButton = document.querySelector(".popup__close-add-button");
   const cardContainer = document.querySelector(".cards__container");
-
-  formAdd.addEventListener("submit", function (evt) {
-    evt.preventDefault();
-  });
+  const submitAdd = document.querySelector(".button__submit-add");
 
   function popupAddOpen() {
     popupAdd.style.display = "block";
@@ -52,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   addButton.addEventListener("click", function () {
     popupAddOpen();
-    addPlace();
   });
   closeAddButton.addEventListener("click", function () {
     popupAddClose();
@@ -66,12 +62,19 @@ document.addEventListener("DOMContentLoaded", function () {
       <button class="card__trash-button button"></button>
       <img src="./images/yoshemite.jpg" alt="" class="card__image" />
       <div class="card__info">
-       <p class="card__text">name</p>
+       <p class="card__text">${placeName.value}</p>
         <button class="card__like-button button"></button>
       </div>
     </div>`
     );
   }
+
+  formAdd.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+    addPlace();
+    placeName.value = "";
+    popupAddClose();
+  });
 
   console.log(typeof document.querySelector(".popup__input-lugar").value);
 });
