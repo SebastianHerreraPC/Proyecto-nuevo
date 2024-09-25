@@ -31,6 +31,9 @@
   width: 21px;
   height: 18px;
 }
+.card__like-button:hover {
+  scale: 1.1;
+}
 .card__trash-button {
   position: absolute;
   z-index: 1;
@@ -43,6 +46,9 @@
   background-color: transparent;
   top: 18px;
   right: 18px;
+}
+.card__trash-button:hover {
+  scale: 1.1;
 }
 .popup__close-button {
   position: absolute;
