@@ -15,15 +15,15 @@
   overflow: hidden;
 }
 .card__image {
-  width: 282px;
-  height: 282px;
+  min-width: 282px;
+  min-height: 282px;
 }
 .card__info {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 0;
-  height: 80px;
+  min-height: 80px;
   background-color: white;
   color: black;
   font-size: 24px;
