@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const formAdd = document.querySelector(".popup__form-add");
   const popupAdd = document.querySelector(".popup__add");
   let placeName = document.querySelector(".popup__input-lugar");
+  let placeImg = document.querySelector(".popup__input-url");
   const addButton = document.querySelector(".profile__add-button");
   const closeAddButton = document.querySelector(".popup__close-add-button");
   const cardContainer = document.querySelector(".cards__container");
@@ -60,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       `
     <div class="card">
       <button class="card__trash-button button"></button>
-      <img src="./images/yoshemite.jpg" alt="" class="card__image" />
+      <img src="${placeImg.value}" alt="" class="card__image" />
       <div class="card__info">
        <p class="card__text">${placeName.value}</p>
         <button class="card__like-button button"></button>
@@ -68,10 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>`
     );
   }
-
+∫
   formAdd.addEventListener("submit", function (evt) {
     evt.preventDefault();
     addPlace();
+    placeImg.value = "";
     placeName.value = "";
     popupAddClose();
   });
