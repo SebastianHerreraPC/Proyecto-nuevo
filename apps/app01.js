@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>`
     );
   }
-∫
+
   formAdd.addEventListener("submit", function (evt) {
     evt.preventDefault();
     addPlace();
