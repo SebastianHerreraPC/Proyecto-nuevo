@@ -35,11 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const formAdd = document.querySelector(".popup__form-add");
   const popupAdd = document.querySelector(".popup__add");
   let placeName = document.querySelector(".popup__input-lugar");
+  let placeImg = document.querySelector(".popup__input-url");
   const cardContainer = document.querySelector(".cards__container");
   const nodeTemplate = document.querySelector("#card__template");
   const addButton = document.querySelector(".profile__add-button");
   const closeAddButton = document.querySelector(".popup__close-add-button");
-  const submitAdd = document.querySelector(".button__submit-add");
 
   function popupAddOpen() {
     popupAdd.style.display = "block";
@@ -58,11 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
   formAdd.addEventListener("submit", function (evt) {
     evt.preventDefault();
     const value = placeName.value;
+    const linkValue = placeImg.value;
+    console.log(linkValue);
     const newCard = nodeTemplate.content.querySelector(".card").cloneNode(true);
-    newCard.querySelector(".card__image");
-    newCard.querySelector(".card__text").cardContainer.append(newCard);
+    newCard.querySelector(".card__image").src = linkValue;
+    newCard.querySelector(".card__text").textContent = value;
+    cardContainer.prepend(newCard);
     formAdd.reset();
-
     popupAddClose();
   });
 
