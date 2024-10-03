@@ -1,5 +1,3 @@
-.cards {
-}
 .cards__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -35,6 +33,4 @@
   font-weight: bold;
   background-color: white;
   color: black;
-}
-.card__like {
 }
