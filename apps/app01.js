@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const addButton = document.querySelector(".profile__add-button");
   const closeAddButton = document.querySelector(".popup__close-add-button");
   const cardContainer = document.querySelector(".cards__container");
-  const submitAdd = document.querySelector(".button__submit-add");
+  const trashButton = document.querySelector(".card__trash-button");
 
   function popupAddOpen() {
     popupAdd.style.display = "block";
@@ -79,4 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   console.log(typeof document.querySelector(".popup__input-lugar").value);
+
+  trashButton.addEventListener("click", function () {});
 });
