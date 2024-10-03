@@ -35,10 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const formAdd = document.querySelector(".popup__form-add");
   const popupAdd = document.querySelector(".popup__add");
   let placeName = document.querySelector(".popup__input-lugar");
+  let placeImg = document.querySelector(".popup__input-url");
   const addButton = document.querySelector(".profile__add-button");
   const closeAddButton = document.querySelector(".popup__close-add-button");
   const cardContainer = document.querySelector(".cards__container");
-  const submitAdd = document.querySelector(".button__submit-add");
+  const trashButton = document.querySelector(".card__trash-button");
 
   function popupAddOpen() {
     popupAdd.style.display = "block";
@@ -54,38 +55,30 @@ document.addEventListener("DOMContentLoaded", function () {
     popupAddClose();
   });
 
-  function addPlace(placeValue) {
-    const cardElement = document.createElement("div");
-    cardElement.classList.add("card");
-    const trashbutton = document.createElement("button");
-    trashbutton.classList.add("card__trash-button");
-    const imageElement = document.createElement("img");
-    imageElement.classList.add("card__image");
-    const infoElement = document.createElement("div");
-    infoElement.classList.add("card__info");
-    const cardName = document.createElement("p");
-    cardName.classList.add("card__text");
-    cardName.textContent = placeName.value;
-    const likeButton = document.createElement("button");
-    likeButton.classList.add("card__like-button");
-
-    cardElement.append(
-      trashbutton,
-      imageElement,
-      infoElement,
-      cardName,
-      likeButton
+  function addPlace() {
+    cardContainer.insertAdjacentHTML(
+      "beforeend",
+      `
+    <div class="card">
+      <button class="card__trash-button button"></button>
+      <img src="${placeImg.value}" alt="" class="card__image" />
+      <div class="card__info">
+       <p class="card__text">${placeName.value}</p>
+        <button class="card__like-button button"></button>
+      </div>
+    </div>`
     );
-
-    cardContainer.append(cardElement);
   }
 
   formAdd.addEventListener("submit", function (evt) {
     evt.preventDefault();
     addPlace();
+    placeImg.value = "";
     placeName.value = "";
     popupAddClose();
   });
 
   console.log(typeof document.querySelector(".popup__input-lugar").value);
+
+  trashButton.addEventListener("click", function () {});
 });
