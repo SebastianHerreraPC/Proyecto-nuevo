@@ -36,10 +36,43 @@ document.addEventListener("DOMContentLoaded", function () {
   const popupAdd = document.querySelector(".popup__add");
   let placeName = document.querySelector(".popup__input-lugar");
   let placeImg = document.querySelector(".popup__input-url");
+  const cardContainer = document.querySelector(".cards__container");
+  const nodeTemplate = document.querySelector("#card__template");
   const addButton = document.querySelector(".profile__add-button");
   const closeAddButton = document.querySelector(".popup__close-add-button");
-  const cardContainer = document.querySelector(".cards__container");
-  const trashButton = document.querySelector(".card__trash-button");
+  const initialCards = [
+    {
+      name: "Valle de Yosemite",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg",
+    },
+    {
+      name: "Lago Louise",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg",
+    },
+    {
+      name: "Montañas Calvas",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg",
+    },
+    {
+      name: "Latemar",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/latemar.jpg",
+    },
+    {
+      name: "Parque Nacional de la Vanoise",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/vanoise.jpg",
+    },
+    {
+      name: "Lago di Braies",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
+    },
+  ];
+
+  initialCards.forEach(function (item) {
+    const newCard = nodeTemplate.content.querySelector(".card").cloneNode(true);
+    newCard.querySelector(".card__image").src = item.link;
+    newCard.querySelector(".card__text").textContent = item.name;
+    cardContainer.prepend(newCard);
+  });
 
   function popupAddOpen() {
     popupAdd.style.display = "block";
@@ -61,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
       `
     <div class="card">
       <button class="card__trash-button button"></button>
-      <img src="${placeImg.value}" alt="" class="card__image" />
+      <img src="./images/yoshemite.jpg" alt="" class="card__image" />
       <div class="card__info">
        <p class="card__text">${placeName.value}</p>
         <button class="card__like-button button"></button>
@@ -72,11 +105,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   formAdd.addEventListener("submit", function (evt) {
     evt.preventDefault();
-    addPlace();
-    placeImg.value = "";
-    placeName.value = "";
+    const value = placeName.value;
+    const linkValue = placeImg.value;
+    console.log(linkValue);
+    const newCard = nodeTemplate.content.querySelector(".card").cloneNode(true);
+    newCard.querySelector(".card__image").src = linkValue;
+    newCard.querySelector(".card__text").textContent = value;
+    cardContainer.prepend(newCard);
+    formAdd.reset();
     popupAddClose();
   });
+
+  // function addPlace() {
+  //   const nodeTemplate = document.querySelector("#card__template").content;
+  //   const newCard = document.querySelector('.card').cloneNode(true);
+  //   newCard.querySelector('.')
+
+  // }
 
   console.log(typeof document.querySelector(".popup__input-lugar").value);
 

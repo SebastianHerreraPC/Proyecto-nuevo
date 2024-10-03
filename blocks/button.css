@@ -28,8 +28,8 @@
   background-repeat: no-repeat;
   background-size: 15px;
   background-color: transparent;
-  width: 21px;
-  height: 18px;
+  min-width: 21px;
+  min-height: 18px;
 }
 .card__like-button:hover {
   scale: 1.1;
