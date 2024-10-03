@@ -35,9 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const formAdd = document.querySelector(".popup__form-add");
   const popupAdd = document.querySelector(".popup__add");
   let placeName = document.querySelector(".popup__input-lugar");
+  const cardContainer = document.querySelector(".cards__container");
+  const nodeTemplate = document.querySelector("#card__template");
   const addButton = document.querySelector(".profile__add-button");
   const closeAddButton = document.querySelector(".popup__close-add-button");
-  const cardContainer = document.querySelector(".cards__container");
   const submitAdd = document.querySelector(".button__submit-add");
 
   function popupAddOpen() {
@@ -54,38 +55,23 @@ document.addEventListener("DOMContentLoaded", function () {
     popupAddClose();
   });
 
-  function addPlace(placeValue) {
-    const cardElement = document.createElement("div");
-    cardElement.classList.add("card");
-    const trashbutton = document.createElement("button");
-    trashbutton.classList.add("card__trash-button");
-    const imageElement = document.createElement("img");
-    imageElement.classList.add("card__image");
-    const infoElement = document.createElement("div");
-    infoElement.classList.add("card__info");
-    const cardName = document.createElement("p");
-    cardName.classList.add("card__text");
-    cardName.textContent = placeName.value;
-    const likeButton = document.createElement("button");
-    likeButton.classList.add("card__like-button");
-
-    cardElement.append(
-      trashbutton,
-      imageElement,
-      infoElement,
-      cardName,
-      likeButton
-    );
-
-    cardContainer.append(cardElement);
-  }
-
   formAdd.addEventListener("submit", function (evt) {
     evt.preventDefault();
-    addPlace();
-    placeName.value = "";
+    const value = placeName.value;
+    const newCard = nodeTemplate.content.querySelector(".card").cloneNode(true);
+    newCard.querySelector(".card__image");
+    newCard.querySelector(".card__text").cardContainer.append(newCard);
+    formAdd.reset();
+
     popupAddClose();
   });
+
+  // function addPlace() {
+  //   const nodeTemplate = document.querySelector("#card__template").content;
+  //   const newCard = document.querySelector('.card').cloneNode(true);
+  //   newCard.querySelector('.')
+
+  // }
 
   console.log(typeof document.querySelector(".popup__input-lugar").value);
 });
