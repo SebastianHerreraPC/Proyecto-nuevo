@@ -88,21 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
     popupAddClose();
   });
 
-  function addPlace() {
-    cardContainer.insertAdjacentHTML(
-      "beforeend",
-      `
-    <div class="card">
-      <button class="card__trash-button button"></button>
-      <img src="./images/yoshemite.jpg" alt="" class="card__image" />
-      <div class="card__info">
-       <p class="card__text">${placeName.value}</p>
-        <button class="card__like-button button"></button>
-      </div>
-    </div>`
-    );
-  }
-
   formAdd.addEventListener("submit", function (evt) {
     evt.preventDefault();
     const value = placeName.value;
