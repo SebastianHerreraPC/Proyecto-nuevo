@@ -125,5 +125,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log(typeof document.querySelector(".popup__input-lugar").value);
 
-  trashButton.addEventListener("click", function () {});
+  cardContainer.addEventListener("click", function (evt) {
+    if (evt.target.classList.contains("card__trash-button")) {
+      const cardToDelete = evt.target.closest(".card");
+      cardToDelete.remove();
+    }
+  });
 });
