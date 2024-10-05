@@ -116,13 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
     popupAddClose();
   });
 
-  // function addPlace() {
-  //   const nodeTemplate = document.querySelector("#card__template").content;
-  //   const newCard = document.querySelector('.card').cloneNode(true);
-  //   newCard.querySelector('.')
-
-  // }
-
   console.log(typeof document.querySelector(".popup__input-lugar").value);
 
   cardContainer.addEventListener("click", function (evt) {
@@ -131,4 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cardToDelete.remove();
     }
   });
+
+  //Validador de el formulario:
+  const sinDefinir = document.querySelector("form");
 });
