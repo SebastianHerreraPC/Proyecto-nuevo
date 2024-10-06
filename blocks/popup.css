@@ -43,10 +43,42 @@
   width: 358px;
   border-bottom: 1px solid #c4c4c4;
 }
+
+.popup__input:hover {
+  scale: 1.02;
+  border-bottom: 1px solid blue;
+}
+
 .popup__edit {
   display: none;
   height: 100vh;
 }
 .popup__add {
   display: none;
+}
+
+.popup__input-name:valid {
+  border-bottom: 1px solid green;
+}
+.popup__input-job:valid {
+  border-bottom: 1px solid green;
+}
+.popup__input-lugar:valid {
+  border-bottom: 1px solid green;
+}
+.popup__input-url:valid {
+  border-bottom: 1px solid green;
+}
+
+.popup__input-name:invalid {
+  border-bottom: 1px solid red;
+}
+.popup__input-job:invalid {
+  border-bottom: 1px solid red;
+}
+.popup__input-lugar:invalid {
+  border-bottom: 1px solid red;
+}
+.popup__input-url:invalid {
+  border-bottom: 1px solid red;
 }

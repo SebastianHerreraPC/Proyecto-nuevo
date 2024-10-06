@@ -49,11 +49,17 @@
                     class="popup__input popup__input-name"
                     type="text"
                     placeholder="Nombre"
+                    maxlength="25"
+                    minlength="5"
+                    required
                   />
                   <input
                     class="popup__input popup__input-job"
                     type="text"
                     placeholder="Acerca de mí"
+                    maxlength="25"
+                    minlength="5"
+                    required
                   />
                   <button class="button button__submit" type="submit">
                     Guardar
@@ -69,11 +75,14 @@
                 <p class="popup__title">Nuevo Lugar</p>
                 <form action="" class="popup__form popup__form-add">
                   <input
+                    maxlength="25"
+                    minlength="5"
                     name="popup__input-lugar"
                     class="popup__input popup__input-lugar"
                     id="popup__input-lugar"
                     type="text"
                     placeholder="Título"
+                    required
                   />
                   <input
                     name="popup__input-url"
@@ -81,6 +90,9 @@
                     id="popup__input-url"
                     type="url"
                     placeholder="Enlace de la imagen"
+                    maxlength="25"
+                    minlength="5"
+                    required
                   />
                   <button class="button button__submit" type="submit">
                     Crear
