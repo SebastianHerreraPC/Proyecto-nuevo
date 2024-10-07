@@ -111,9 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Selecciona el formulario
-
-  // Validador del formulario
   document.querySelectorAll(".popup__form").forEach((formElement) => {
     const popupElements = formElement.querySelectorAll(".popup__input");
     const submitButton = formElement.querySelector(".button__submit");
