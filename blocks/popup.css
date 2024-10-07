@@ -38,10 +38,13 @@
   background-color: white;
   border: none;
   color: black;
-  margin: 0px auto 30px;
+  margin: 30px auto 0px;
   height: 27px;
   width: 358px;
   border-bottom: 1px solid #c4c4c4;
+}
+.popup__input:first-child {
+  margin-top: auto;
 }
 
 .popup__input:hover {
@@ -57,28 +60,18 @@
   display: none;
 }
 
-.popup__input-name:valid {
-  border-bottom: 1px solid green;
-}
-.popup__input-job:valid {
-  border-bottom: 1px solid green;
-}
-.popup__input-lugar:valid {
-  border-bottom: 1px solid green;
-}
-.popup__input-url:valid {
+.popup__input:valid {
   border-bottom: 1px solid green;
 }
 
-.popup__input-name:invalid {
+.popup__input:invalid {
+  color: red;
   border-bottom: 1px solid red;
 }
-.popup__input-job:invalid {
-  border-bottom: 1px solid red;
-}
-.popup__input-lugar:invalid {
-  border-bottom: 1px solid red;
-}
-.popup__input-url:invalid {
-  border-bottom: 1px solid red;
+
+.pop__up-error {
+  color: red;
+  background-color: transparent;
+  font-size: 12px;
+  margin-top: 5px;
 }

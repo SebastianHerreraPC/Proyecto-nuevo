@@ -50,17 +50,25 @@
                     type="text"
                     placeholder="Nombre"
                     maxlength="40"
-                    minlength="2"
+                    minlength="4"
                     required
+                    name="name"
                   />
+                  <span class="pop__up-error pop__up-error-name"
+                    >Por favor, rellena este campo.</span
+                  >
                   <input
                     class="popup__input popup__input-job"
                     type="text"
                     placeholder="Acerca de mí"
                     maxlength="200"
-                    minlength="2"
+                    minlength="4"
                     required
+                    name="job"
                   />
+                  <span class="pop__up-error pop__up-error-job"
+                    >Por favor, rellena este campo.</span
+                  >
                   <button class="button button__submit" type="submit" disabled>
                     Guardar
                   </button>
@@ -76,24 +84,32 @@
                 <form action="" class="popup__form popup__form-add" novalidate>
                   <input
                     maxlength="25"
-                    minlength="5"
-                    name="popup__input-lugar"
+                    minlength="4"
                     class="popup__input popup__input-lugar"
                     id="popup__input-lugar"
                     type="text"
                     placeholder="Título"
                     required
+                    name="place"
                   />
+                  <span class="pop__up-error pop__up-error-place"
+                    >Por favor, rellena este campo.</span
+                  >
+
                   <input
-                    name="popup__input-url"
                     class="popup__input popup__input-url"
                     id="popup__input-url"
                     type="url"
                     placeholder="Enlace de la imagen"
                     maxlength="300"
-                    minlength="5"
+                    minlength="4"
                     required
+                    name="url"
                   />
+                  <span class="pop__up-error pop__up-error-url"
+                    >Por favor, introduce una url valida.</span
+                  >
+
                   <button class="button button__submit" type="submit" disabled>
                     Crear
                   </button>
