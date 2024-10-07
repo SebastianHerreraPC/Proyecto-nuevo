@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const inputjob = document.querySelector(".popup__input-job");
   const profileJob = document.querySelector(".profile__job");
   const popupEdit = document.querySelector(".popup__edit");
+  const formElement = document.querySelector(".popup__form");
 
   function popupOpen() {
     popupEdit.style.display = "block";
@@ -110,6 +111,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  //Validador de el formulario:
-  const sinDefinir = document.querySelector("form");
+  // Selecciona el formulario
+
+  // Validador del formulario
+  document.querySelectorAll(".popup__form").forEach((formElement) => {
+    const popupElements = formElement.querySelectorAll(".popup__input");
+    const submitButton = formElement.querySelector(".button__submit");
+
+    popupElements.forEach((inputElement) => {
+      inputElement.addEventListener("input", () => {
+        const errorNode = formElement.querySelector(
+          `.pop__up-error-${inputElement.name}`
+        );
+
+        if (!inputElement.validity.valid) {
+          inputElement.classList.add("popup__input-invalid");
+          if (errorNode) {
+            errorNode.textContent = inputElement.validationMessage;
+          }
+        } else {
+          inputElement.classList.remove("popup__input-invalid");
+          if (errorNode) {
+            errorNode.textContent = "";
+          }
+        }
+
+        const isValid = Array.from(popupElements).every(
+          (input) => input.validity.valid
+        );
+        submitButton.disabled = !isValid;
+      });
+    });
+  });
 });

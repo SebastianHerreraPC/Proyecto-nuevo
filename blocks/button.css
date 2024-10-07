@@ -95,3 +95,6 @@
 .profile__add-button:hover {
   transform: scale(1.1);
 }
+.button__submit:disabled {
+  background-color: darkgray;
+}

@@ -38,15 +38,40 @@
   background-color: white;
   border: none;
   color: black;
-  margin: 0px auto 30px;
+  margin: 30px auto 0px;
   height: 27px;
   width: 358px;
   border-bottom: 1px solid #c4c4c4;
 }
+.popup__input:first-child {
+  margin-top: auto;
+}
+
+.popup__input:hover {
+  scale: 1.02;
+  border-bottom: 1px solid blue;
+}
+
 .popup__edit {
   display: none;
   height: 100vh;
 }
 .popup__add {
   display: none;
+}
+
+.popup__input:valid {
+  border-bottom: 1px solid green;
+}
+
+.popup__input:invalid {
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+.pop__up-error {
+  color: red;
+  background-color: transparent;
+  font-size: 12px;
+  margin-top: 5px;
 }
