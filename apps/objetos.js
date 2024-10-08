@@ -1,38 +1,40 @@
-//
-
-console.log(this);
-
-this.nombre = "contexto Global";
-
-console.log(this.nombre);
-
-function imprimir() {
-  console.log(this.nombre);
+function like() {
+  this.isLiked = !this.isLiked;
+}
+function getSongInfo() {
+  return `${this.artist} - "${this.title}"(${this.releaseYear})`;
 }
 
-imprimir();
+function createSong(title, artist, releaseYear) {
+  const newSong = {
+    title,
+    artist,
+    isLiked: false,
+    like,
+    releaseYear,
+    getSongInfo,
+  };
 
-const obj = {
-  nombre: "contexto Objeto ",
-  imprimir: function () {
-    console.log(this.nombre);
-  },
-};
+  return newSong;
+}
 
-obj.imprimir();
+const miCancion = createSong("Despacito", "Luis Fonsi", 2020);
 
-const obj2 = {
-  nombre: "contexto Objeto 2  ",
-  imprimir,
-};
+console.log(miCancion.getSongInfo());
 
-obj2.imprimir();
+class PodcastEpisode {
+  constructor(titulo, artista, guest, duration) {
+    this.titulo = titulo;
+    this.artista = artista;
+    this.guest = guest;
+    this.duration = duration;
+    this.isLiked = false;
+  }
 
-const obj3 = {
-  nombre: "contexto Objeto 3",
-  imprimir: () => {
-    console.log(this.nombre);
-  },
-};
-
-obj3.imprimir();
+  like() {
+    this.isLiked = !this.isLiked;
+  }
+  getEpisodeInfo() {
+    return `${this.artista}. "${this.titulo}" - ${this.artista} (${this.duration})`;
+  }
+}
