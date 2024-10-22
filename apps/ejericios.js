@@ -97,3 +97,17 @@ usuarios.forEach((estado) => {
     console.log(estado.nombre + " esta activo");
   }
 });
+
+//
+
+class estudiante {
+  constructor() {
+    let name, clases;
+  }
+  getName() {
+    return this.name;
+  }
+  setName(name) {
+    this.name = name;
+  }
+}
