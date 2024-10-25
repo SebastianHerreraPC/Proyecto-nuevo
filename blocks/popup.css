@@ -80,6 +80,7 @@
 }
 .popup__image_container {
   height: 70%;
+  display: hidden;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -109,6 +109,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const imagePopImage = document.querySelector(".popup__image_large");
   const imagePopName = document.querySelector("popup__image_text");
 
+  imageClose.addEventListener("click", () => {
+    imagePop.style.display = "none";
+  });
+
   const likeButton = document.querySelectorAll(".card__like-button");
   likeButton.forEach((button) => {
     button.addEventListener("click", function () {
