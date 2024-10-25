@@ -104,40 +104,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log(typeof document.querySelector(".popup__input-lugar").value);
 
-  cardContainer.addEventListener("click", function (evt) {
-    if (evt.target.classList.contains("card__trash-button")) {
-      const cardToDelete = evt.target.closest(".card");
-      cardToDelete.remove();
-    }
-  });
+  const imagePop = document.querySelector(".popup__image");
+  const imageClose = document.querySelector(".popup__image_button");
+  const imagePopImage = document.querySelector(".popup__image_large");
+  const imagePopName = document.querySelector("popup__image_text");
 
-  document.querySelectorAll(".popup__form").forEach((formElement) => {
-    const popupElements = formElement.querySelectorAll(".popup__input");
-    const submitButton = formElement.querySelector(".button__submit");
-
-    popupElements.forEach((inputElement) => {
-      inputElement.addEventListener("input", () => {
-        const errorNode = formElement.querySelector(
-          `.pop__up-error-${inputElement.name}`
-        );
-
-        if (!inputElement.validity.valid) {
-          inputElement.classList.add("popup__input-invalid");
-          if (errorNode) {
-            errorNode.textContent = inputElement.validationMessage;
-          }
-        } else {
-          inputElement.classList.remove("popup__input-invalid");
-          if (errorNode) {
-            errorNode.textContent = "";
-          }
-        }
-
-        const isValid = Array.from(popupElements).every(
-          (input) => input.validity.valid
-        );
-        submitButton.disabled = !isValid;
-      });
+  const likeButton = document.querySelectorAll(".card__like-button");
+  likeButton.forEach((button) => {
+    button.addEventListener("click", function () {
+      this.classList.toggle("active");
     });
   });
+
+  const pictureLarge = document.querySelectorAll(".card__image");
+  pictureLarge;
 });

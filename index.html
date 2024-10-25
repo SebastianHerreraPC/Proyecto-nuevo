@@ -44,31 +44,24 @@
               <div class="popup__content">
                 <button class="popup__close-button button"></button>
                 <p class="popup__title">Editar perfil</p>
-                <form action="" class="popup__form popup__form-edit" novalidate>
+                <form action="" class="popup__form popup__form-edit">
                   <input
                     class="popup__input popup__input-name"
                     type="text"
                     placeholder="Nombre"
                     maxlength="40"
                     minlength="4"
-                    required
                     name="name"
                   />
-                  <span class="pop__up-error pop__up-error-name"
-                    >Por favor, rellena este campo.</span
-                  >
                   <input
                     class="popup__input popup__input-job"
                     type="text"
                     placeholder="Acerca de mí"
                     maxlength="200"
                     minlength="4"
-                    required
                     name="job"
                   />
-                  <span class="pop__up-error pop__up-error-job"
-                    >Por favor, rellena este campo.</span
-                  >
+
                   <button class="button button__submit" type="submit" disabled>
                     Guardar
                   </button>
@@ -81,7 +74,7 @@
               <div class="popup__content">
                 <button class="popup__close-add-button button"></button>
                 <p class="popup__title">Nuevo Lugar</p>
-                <form action="" class="popup__form popup__form-add" novalidate>
+                <form action="" class="popup__form popup__form-add">
                   <input
                     maxlength="25"
                     minlength="4"
@@ -89,13 +82,8 @@
                     id="popup__input-lugar"
                     type="text"
                     placeholder="Título"
-                    required
                     name="place"
                   />
-                  <span class="pop__up-error pop__up-error-place"
-                    >Por favor, rellena este campo.</span
-                  >
-
                   <input
                     class="popup__input popup__input-url"
                     id="popup__input-url"
@@ -103,12 +91,8 @@
                     placeholder="Enlace de la imagen"
                     maxlength="300"
                     minlength="4"
-                    required
                     name="url"
                   />
-                  <span class="pop__up-error pop__up-error-url"
-                    >Por favor, introduce una url valida.</span
-                  >
 
                   <button class="button button__submit" type="submit" disabled>
                     Crear
@@ -117,6 +101,19 @@
               </div>
             </div>
           </section>
+        </section>
+        <section class="popup__image">
+          <div class="popup__image_container">
+            <div class="popup__image_content">
+              <button class="button popup__image_button"></button>
+              <img
+                class="popup__image_large"
+                src="./images/barcos.png"
+                alt=""
+              />
+              <p class="popup__image_text">ejemplo de texto aqui</p>
+            </div>
+          </div>
         </section>
       </main>
       <footer class="footer">
@@ -128,7 +125,9 @@
           <button class="card__trash-button"></button>
           <div class="card__info">
             <p class="card__text"></p>
-            <button class="button card__like-button"></button>
+            <button
+              class="button card__like-button card__like-button.active"
+            ></button>
           </div>
         </div>
       </template>
