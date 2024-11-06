@@ -104,22 +104,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log(typeof document.querySelector(".popup__input-lugar").value);
 
-  const imagePop = document.querySelector(".popup__image");
-  const imageClose = document.querySelector(".popup__image_button");
-  const imagePopImage = document.querySelector(".popup__image_large");
-  const imagePopName = document.querySelector("popup__image_text");
-
-  imageClose.addEventListener("click", () => {
-    imagePop.style.display = "none";
-  });
-
   const likeButton = document.querySelectorAll(".card__like-button");
   likeButton.forEach((button) => {
     button.addEventListener("click", function () {
       this.classList.toggle("active");
     });
   });
-
-  const pictureLarge = document.querySelectorAll(".card__image");
-  pictureLarge;
 });
