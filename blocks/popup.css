@@ -60,45 +60,7 @@
   display: none;
 }
 
-.popup__input:valid {
-  border-bottom: 1px solid green;
-}
-
 .popup__input:invalid {
   color: red;
   border-bottom: 1px solid red;
-}
-
-.pop__up-error {
-  color: red;
-  background-color: transparent;
-  font-size: 12px;
-  margin-top: 5px;
-}
-.popup__image {
-  height: 100vh;
-}
-.popup__image_container {
-  height: 70%;
-  display: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.popup__image_content {
-  display: flex;
-  padding: 100px;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  justify-content: center;
-}
-.popup__image_large {
-  height: 70vh;
-  width: 50vh;
-}
-.popup__image_text {
-  align-items: flex-start;
-  margin-right: 315px;
-  margin-top: 10px;
 }

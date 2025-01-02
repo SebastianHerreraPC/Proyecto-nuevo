@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./pages/index.css" />
-    <title>Document</title>
+    <title>Falta span</title>
   </head>
   <body>
     <div class="page">
@@ -53,6 +53,8 @@
                     minlength="4"
                     name="name"
                   />
+                  <span class="error-message" id="name-error"></span>
+
                   <input
                     class="popup__input popup__input-job"
                     type="text"
@@ -61,8 +63,9 @@
                     minlength="4"
                     name="job"
                   />
+                  <span class="error-message" id="job-error"></span>
 
-                  <button class="button button__submit" type="submit" disabled>
+                  <button class="button button__submit" type="submit">
                     Guardar
                   </button>
                 </form>
@@ -84,6 +87,9 @@
                     placeholder="Título"
                     name="place"
                   />
+                  <span class="error-message" id="place-error"></span>
+                  <!-- Span para errores -->
+
                   <input
                     class="popup__input popup__input-url"
                     id="popup__input-url"
@@ -93,8 +99,10 @@
                     minlength="4"
                     name="url"
                   />
+                  <span class="error-message" id="url-error"></span>
+                  <!-- Span para errores -->
 
-                  <button class="button button__submit" type="submit" disabled>
+                  <button class="button button__submit" type="submit">
                     Crear
                   </button>
                 </form>
@@ -108,7 +116,7 @@
       </footer>
       <template id="card__template">
         <div class="card">
-          <img src="" alt="" class="card__image popup__image" />
+          <img src="" alt="" class="card__image" />
           <button class="card__trash-button"></button>
           <div class="card__info">
             <p class="card__text"></p>
